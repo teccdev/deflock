@@ -1,4 +1,4 @@
-const apiUrl = 'https://cdn.deflock.me/alpr-counts.json'
+const apiUrl = 'https://api.allorigins.win/raw?url=https://cdn.deflock.me/alpr-counts.json'
 
 async function init() {
     document.querySelectorAll('[data-dynamic-text]').forEach((el) => setTimeout(() => (el.style.opacity = '1'), 200 * el.dataset.fadeTime))
