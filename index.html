@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Learn how Flock Safety automated license plate readers violate your constitutional rights and how to fight back in Indiana. Non-profit grassroots organization Deflock Indiana." />
+        <title>DEFLOCKINDIANA.ORG</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+        <link rel="icon" href="deflock.png" type="image/png" />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            brand: '#ff0000',
+                            dark: '#0a0a0a',
+                            darker: '#050505',
+                            surface: '#171717',
+                        },
+                        fontFamily: {
+                            sans: ['Inter', 'sans-serif'],
+                            heading: ['Montserrat', 'sans-serif'],
+                        },
+                    },
+                },
+            }
+        </script>
+
+        <script src="script.js"></script>
+
+        <style>
+            ::selection {
+                background-color: #ff0000;
+                color: white;
+            }
+
+            [data-dynamic-text] {
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+        </style>
+    </head>
+    <body class="bg-dark text-gray-300 font-sans antialiased flex flex-col min-h-screen">
+        <!-- Nav -->
+        <nav class="fixed w-full z-50 bg-darker/90 backdrop-blur-md border-b border-brand/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex-shrink-0">
+                        <a href="#" class="font-heading font-black text-2xl tracking-tighter text-white uppercase flex items-center gap-2">
+                            <img src="deflock.png" width="32" height="32" alt="Logo" />
+                            DEFLOCK <span class="text-brand">INDIANA</span>
+                        </a>
+                    </div>
+
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-8">
+                            <a href="#contact" class="font-heading font-bold text-sm tracking-widest uppercase px-4 py-2 border-2 border-brand text-brand hover:bg-brand hover:text-white transition-all duration-300">Get Involved</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Main content area -->
+            <section class="relative pt-32 flex items-center justify-center overflow-hidden">
+                <!-- BG -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                    <h1 class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white uppercase mb-6 leading-none">
+                        HELP END <br />
+                        <span class="text-transparent bg-clip-text bg-brand">UNCONSTITUTIONAL SURVEILLANCE</span> <br />
+                        IN THE MIDWEST
+                    </h1>
+                    <p data-dynamic-text data-fade-time="1" class="mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
+                        There are currently <strong id="total-count">&gt;100,000</strong> automated license plate readers (ALPRs) in the United States. These devices use AI to read license plates, vehicle characteristics, and more, and then
+                        automatically store them in (unsecured) databases.
+                    </p>
+                    <p data-dynamic-text data-fade-time="2" class="mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
+                        These devices are supposedly used to stop crime, but independent studies have repeatedly shown that Flock cameras have no impact on crime rates, despite claims from police departments and Flock itself.
+                    </p>
+                    <p data-dynamic-text data-fade-time="3" class="mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
+                        This is just the tip of the iceberg. Learn how Flock Safety is allowing government bodies to violate your constitutional rights and what you can do to stop them in your local community.
+                    </p>
+                </div>
+
+                <div>
+                    <img src="camera2.png" class="hidden xl:block xl:w-[400px] 2xl:w-[500px] h-auto absolute -right-24 2xl:-right-16 top-20 transform -scale-x-100" alt="Security Camera" />
+                    <!-- note - there is no camera1. I do not intent to fix the filename. -->
+                </div>
+            </section>
+
+            <section id="about" class="py-24 bg-darker border-t border-b border-surface">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                        <div class="mb-12 lg:mb-0">
+                            <h2 class="font-heading font-black text-2xl sm:text-4xl text-white uppercase mb-6 flex items-center gap-4">
+                                <span class="w-12 h-1 bg-brand block"></span>
+                                The "safety" myth
+                            </h2>
+                            <p class="text-lg text-gray-400 mb-6 leading-relaxed">
+                                While Flock would like police departments and civilians to believe that their devices reduce crime, they don't. Less than <strong>0.3%</strong> of hits provided any leads to crimes in a sixteen-year study in
+                                the city of Piedmont, CA, per
+                                <a
+                                    href="https://www.independent.org/article/2021/11/30/automated-license-plate-readers-a-study-in-failure/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="border-b border-dashed border-dark-600 hover:border-red-400/50"
+                                    >independent.org</a
+                                >.
+                            </p>
+                            <p class="text-lg text-gray-400 leading-relaxed">
+                                This wasn't a one-off case; despite Flock's
+                                <a
+                                    href="https://salvacybersec.medium.com/vulnerability-assessment-and-intelligence-estimate-of-the-flock-safety-surveillance-network-4a797d8176ec/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="border-b border-dashed border-dark-600 hover:border-red-400/50"
+                                    >numerous flawed studies and claims</a
+                                >, their statements have been dismantled by researchers (including
+                                <a
+                                    href="https://www.forbes.com/sites/cyrusfarivar/2024/02/29/flock-ai-cameras-may-not-reduce-crime/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="border-b border-dashed border-dark-600 hover:border-red-400/50"
+                                    >Forbes</a
+                                >
+                                and
+                                <a
+                                    href="https://www.techdirt.com/2024/04/01/studies-show-flocks-alprs-reduce-crime-so-long-as-flock-controls-the-inputs-and-the-methodology/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="border-b border-dashed border-dark-600 hover:border-red-400/50"
+                                    >others</a
+                                >).
+                            </p>
+                            <p class="text-lg text-gray-400 leading-relaxed">
+                                Police departments have had access to tons of effective, non-intrusive technology for decades. Flock cameras aren't a miracle safety tool like they claim — they've repeatedly proven themselves to be an
+                                expensive, near-useless piece of equipment funded by you, the taxpayer.
+                            </p>
+                        </div>
+                        <img
+                            class="relative"
+                            src="https://i0.wp.com/newspack-berkeleyside-cityside.s3.amazonaws.com/wp-content/uploads/2025/11/IMG_3545-scaled-1.jpg"
+                            alt="Flock ALPR camera installed on a residential street pole in Berkeley, California"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section id="rights" class="py-24 bg-darker border-t border-b border-surface">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                        <img class="relative" src="https://hls.harvard.edu/wp-content/uploads/2022/05/CONSTITUTION_iStock-923052552_2500.jpg" alt="United States Constitution document" />
+                        <div class="mb-12 lg:mb-0">
+                            <h2 class="font-heading font-black text-2xl sm:text-4xl text-white uppercase mb-6 flex items-center gap-4">
+                                Constitutional Rights Violations
+                                <span class="w-12 h-1 bg-brand block"></span>
+                            </h2>
+                            <h3 class="text-2xl">4th Amendment</h3>
+                            <p class="text-lg text-gray-400 mb-6 leading-relaxed">
+                                Law enforcement does not need a warrant nor probable cause to inspect your vehicle via ALPRs. Keep in mind, ALPRs like Flock's don't just check your license plate like old-school ALPRs do. They keep a precise
+                                'fingerprint' of your car based on hundreds of pictures, using it to track where you've been and where you've been going.
+                            </p>
+                            <p class="text-lg text-gray-400 mb-6 leading-relaxed">
+                                They know where you work. They know where your house is. They know your doctor's office. Everything is being recorded and analyzed with AI to track you — without your consent and without you even being
+                                suspected of a crime. This is a clear violation of every US citizen's 4th amendment rights against unreasonable searches, and multiple lawsuits, like
+                                <a
+                                    href="https://www.independent.org/article/2021/11/30/automated-license-plate-readers-a-study-in-failure/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="border-b border-dashed border-dark-600 hover:border-red-400/50"
+                                    >this one</a
+                                >, are currently happening.
+                            </p>
+                            <h3 class="text-2xl">2nd Amendment</h3>
+                            <p class="text-lg text-gray-400 mb-6 leading-relaxed">
+                                Don't think this is the only right they're going after — Flock also produces gunshot detectors, tracking when and where you shoot guns. Utilizing your right to bear arms on your own property is creating an AI
+                                profile of you.
+                            </p>
+                            <h3 class="text-2xl">...et cetera</h3>
+                            <p class="text-lg text-gray-400 mb-6 leading-relaxed">
+                                While these are the most obvious threats to your rights, Flock is also producing drones and other AI tracking equipment. Even if everything happening so far doesn't seem too bad, the government can and will
+                                continue to track everything they can in the name of 'safety' unless we fight back.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mission" class="py-24 relative">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="font-heading font-black text-4xl sm:text-5xl text-white uppercase mb-4">GET <span class="text-brand">INVOLVED</span></h2>
+                        <p class="max-w-2xl mx-auto text-gray-400 text-lg">These are the best ways to help prevent this form of government overreach.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-surface p-8 border-t-4 border-brand">
+                            <h3 class="font-heading font-extrabold text-2xl text-white uppercase mb-4">Learn</h3>
+                            <p class="text-gray-400">Stay informed about all the latest news and research on this topic. Some useful links:</p>
+                            <br />
+                            <ul>
+                                <li>
+                                    <a href="https://deflock.org/" target="_blank" rel="noopener noreferrer" class="border-b border-dashed border-dark-600 hover:border-brand"> DeFlock </a>
+                                </li>
+                                <li>
+                                    <a href="https://dontgetflocked.com/" target="_blank" rel="noopener noreferrer" class="border-b border-dashed border-dark-600 hover:border-brand"> FlockHopper </a>
+                                </li>
+                                <li>
+                                    <a href="https://footnote4a.org/" target="_blank" rel="noopener noreferrer" class="border-b border-dashed border-dark-600 hover:border-brand"> Footnote 4A </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-surface p-8 border-t-4 border-brand">
+                            <h3 class="font-heading font-extrabold text-2xl text-white uppercase mb-4">Speak up</h3>
+                            <p class="text-gray-400">Talk to your elected officials about this issue. Guides:</p>
+                            <br />
+                            <ul>
+                                <li><a href="https://deflock.org/council" target="_blank" rel="noopener noreferrer" class="border-b border-dashed border-dark-600 hover:border-brand"> City council guide </a></li>
+                                <li><a href="https://deflock.org/foia" target="_blank" rel="noopener noreferrer" class="border-b border-dashed border-dark-600 hover:border-brand"> Public records guide </a></li>
+                            </ul>
+                        </div>
+                        <div class="bg-surface p-8 border-t-4 border-brand">
+                            <h3 class="font-heading font-extrabold text-2xl text-white uppercase mb-4">Inform</h3>
+                            <p class="text-gray-400">Share content with your friends and neighbors. Recommendations:</p>
+                            <br />
+                            <ul>
+                                <li><a href="https://instagram.deflockindiana.org" target="_blank" rel="noopener noreferrer" class="border-b border-dashed border-dark-600 hover:border-brand"> Our Instagram page </a></li>
+                                <li><a href="https://www.instagram.com/deflock.me/" target="_blank" rel="noopener noreferrer" class="border-b border-dashed border-dark-600 hover:border-brand"> DeFlock's Instagram page </a></li>
+                                <li><a href="https://deflock.org/groups" target="_blank" rel="noopener noreferrer" class="border-b border-dashed border-dark-600 hover:border-brand"> List of local deflock groups </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-brand text-center h-80">
+                <img src="deflock.png" alt="Logo" class="w-full h-full overflow-hidden object-cover" draggable="false" />
+            </section>
+        </main>
+        <!-- Footer / Contact -->
+        <footer id="contact" class="bg-darker pt-20 pb-10 border-t border-surface mt-auto">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    <div class="lg:col-span-2">
+                        <a href="#" class="font-heading font-black text-3xl tracking-tighter text-white uppercase flex items-center gap-2 mb-6">
+                            <span class="w-3 h-3 bg-brand rounded-full inline-block"></span>
+                            DEFLOCK <span class="text-brand">INDIANA</span>
+                        </a>
+                        <p class="text-gray-400 max-w-sm">A non-profit organization dedicated to fostering change and empowering the local community through direct action and education.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-heading font-bold text-white uppercase tracking-widest mb-6">Connect</h4>
+                        <ul class="space-y-4">
+                            <li>
+                                <a href="mailto:info@deflockindiana.org" class="text-gray-400 hover:text-brand transition-colors flex items-center gap-3">
+                                    <svg
+                                        fill="#ffffff"
+                                        height="24px"
+                                        width="24px"
+                                        version="1.1"
+                                        id="Capa_1"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0 0 493.497 493.497"
+                                        xml:space="preserve"
+                                        stroke="#ffffff"
+                                    >
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M444.556,85.218H48.942C21.954,85.218,0,107.171,0,134.16v225.177c0,26.988,21.954,48.942,48.942,48.942h395.613 c26.988,0,48.941-21.954,48.941-48.942V134.16C493.497,107.171,471.544,85.218,444.556,85.218z M460.87,134.16v225.177 c0,2.574-0.725,4.924-1.793,7.09L343.74,251.081l117.097-117.097C460.837,134.049,460.87,134.096,460.87,134.16z M32.628,359.336 V134.16c0-0.064,0.033-0.11,0.033-0.175l117.097,117.097L34.413,366.426C33.353,364.26,32.628,361.911,32.628,359.336z M251.784,296.902c-2.692,2.691-7.378,2.691-10.07,0L62.667,117.846h368.172L251.784,296.902z M172.827,274.152l45.818,45.819 c7.512,7.511,17.493,11.645,28.104,11.645c10.61,0,20.592-4.134,28.104-11.645l45.82-45.819l101.49,101.499H71.327L172.827,274.152z "
+                                            ></path>
+                                        </g>
+                                    </svg>
+                                    Email us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://instagram.deflockindiana.org" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand transition-colors flex items-center gap-3">
+                                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.00024000000000000003">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9ZM7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM17.5 8C18.3284 8 19 7.32843 19 6.5C19 5.67157 18.3284 5 17.5 5C16.6716 5 16 5.67157 16 6.5C16 7.32843 16.6716 8 17.5 8Z"
+                                                fill="#ffffff"
+                                            ></path>
+                                        </g>
+                                    </svg>
+                                    Instagram page
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-surface pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm text-gray-500">🄯 2026 Deflock Indiana - no rights reserved. Not directly affiliated with DeFlock.me.</p>
+                    <div class="flex items-center gap-1 text-sm text-gray-500">
+                        Developed by <a href="https://github.com/teccdev" target="_blank" class="border-b border-dashed border-dark-600 hover:border-brand"> teccin</a> • Source code on GitHub
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
