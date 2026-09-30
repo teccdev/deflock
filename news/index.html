@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Latest news and updates from Deflock Indiana - fighting unconstitutional surveillance in the Midwest." />
+        <title>DEFLOCKINDIANA.ORG - News</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+        <link rel="icon" href="../deflock.png" type="image/png" />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            brand: '#ff0000',
+                            dark: '#0a0a0a',
+                            darker: '#050505',
+                            surface: '#171717',
+                        },
+                        fontFamily: {
+                            sans: ['Inter', 'sans-serif'],
+                            heading: ['Montserrat', 'sans-serif'],
+                        },
+                    },
+                },
+            }
+        </script>
+
+        <script src="../script.js"></script>
+
+        <style>
+            ::selection {
+                background-color: #ff0000;
+                color: white;
+            }
+
+            [data-dynamic-text] {
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+        </style>
+    </head>
+    <body class="bg-dark text-gray-300 font-sans antialiased flex flex-col min-h-screen">
+        <!-- Nav -->
+        <nav class="fixed w-full z-50 bg-darker/90 backdrop-blur-md border-b border-brand/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex-shrink-0">
+                        <a href="../index.html" class="font-heading font-black text-2xl tracking-tighter text-white uppercase flex items-center gap-2">
+                            <img src="../deflock.png" width="32" height="32" alt="Logo" />
+                            DEFLOCK <span class="text-brand">INDIANA</span>
+                        </a>
+                    </div>
+
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-8">
+                            <a href="news/index.html" class="font-heading font-bold text-sm tracking-widest uppercase px-4 py-2 text-white hover:text-brand transition-all duration-300">Latest News</a>
+                            <a href="#contact" class="font-heading font-bold text-sm tracking-widest uppercase px-4 py-2 border-2 border-brand text-brand hover:bg-brand hover:text-white transition-all duration-300">Get Involved</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="flex-1 pt-20">
+            <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex flex-col items-center text-center">
+                <div class="w-20 h-20 rounded-full bg-surface border-2 border-brand/30 flex items-center justify-center mb-8">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="#ffffff"/>
+                    </svg>
+                </div>
+
+                <h1 class="font-heading font-black text-3xl sm:text-4xl text-white uppercase tracking-tight mb-4">Follow Us on Threads</h1>
+                <p class="text-gray-400 text-lg mb-10 max-w-lg">Stay up to date with the latest news, actions, and community updates from Deflock Indiana.</p>
+
+                <a href="https://www.threads.net/@deflock.indiana" target="_blank" rel="noopener noreferrer"
+                   class="group inline-flex items-center gap-3 bg-brand hover:bg-red-700 text-white font-heading font-bold text-sm tracking-widest uppercase px-8 py-4 rounded-full transition-all duration-300 hover:scale-105">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                    @deflock.indiana
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </section>
+        </main>
+
+        <!-- Footer / Contact -->
+        <footer id="contact" class="bg-darker pt-20 pb-10 border-t border-surface mt-auto">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    <div class="lg:col-span-2">
+                        <a href="../index.html" class="font-heading font-black text-3xl tracking-tighter text-white uppercase flex items-center gap-2 mb-6">
+                            <span class="w-3 h-3 bg-brand rounded-full inline-block"></span>
+                            DEFLOCK <span class="text-brand">INDIANA</span>
+                        </a>
+                        <p class="text-gray-400 max-w-sm">A non-profit organization dedicated to fostering change and empowering the local community through direct action and education.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-heading font-bold text-white uppercase tracking-widest mb-6">Connect</h4>
+                        <ul class="space-y-4">
+                            <li>
+                                <a href="mailto:info@deflockindiana.org" class="text-gray-400 hover:text-brand transition-colors flex items-center gap-3">
+                                    <svg
+                                        fill="#ffffff"
+                                        height="24px"
+                                        width="24px"
+                                        version="1.1"
+                                        id="Capa_1"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0 0 493.497 493.497"
+                                        xml:space="preserve"
+                                        stroke="#ffffff"
+                                    >
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M444.556,85.218H48.942C21.954,85.218,0,107.171,0,134.16v225.177c0,26.988,21.954,48.942,48.942,48.942h395.613 c26.988,0,48.941-21.954,48.941-48.942V134.16C493.497,107.171,471.544,85.218,444.556,85.218z M460.87,134.16v225.177 c0,2.574-0.725,4.924-1.793,7.09L343.74,251.081l117.097-117.097C460.837,134.049,460.87,134.096,460.87,134.16z M32.628,359.336 V134.16c0-0.064,0.033-0.11,0.033-0.175l117.097,117.097L34.413,366.426C33.353,364.26,32.628,361.911,32.628,359.336z M251.784,296.902c-2.692,2.691-7.378,2.691-10.07,0L62.667,117.846h368.172L251.784,296.902z M172.827,274.152l45.818,45.819 c7.512,7.511,17.493,11.645,28.104,11.645c10.61,0,20.592-4.134,28.104-11.645l45.82-45.819l101.49,101.499H71.327L172.827,274.152z "
+                                            ></path>
+                                        </g>
+                                    </svg>
+                                    Email us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://instagram.deflockindiana.org" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand transition-colors flex items-center gap-3">
+                                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.00024000000000000003">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9ZM7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM17.5 8C18.3284 8 19 7.32843 19 6.5C19 5.67157 18.3284 5 17.5 5C16.6716 5 16 5.67157 16 6.5C16 7.32843 16.6716 8 17.5 8Z"
+                                                fill="#ffffff"
+                                            ></path>
+                                        </g>
+                                    </svg>
+                                    Instagram page
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-surface pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm text-gray-500">🄯 2026 Deflock Indiana - no rights reserved. Not directly affiliated with DeFlock.me.</p>
+                    <div class="flex items-center gap-1 text-sm text-gray-500">
+                        Developed by <a href="https://github.com/teccdev" target="_blank" class="border-b border-dashed border-dark-600 hover:border-brand"> teccin</a> • Source code on GitHub
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
